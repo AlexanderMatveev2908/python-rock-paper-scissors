@@ -18,7 +18,7 @@ class CoreMng:
     @classmethod
     def cpu_choice(cls: type["CoreMng"]) -> GameChoice:
 
-        options: list[str] = GameChoice.as_list()
+        options: list[str] = [x for x in GameChoice.as_list() if x != "exit"]
         choice: str = random.choice(options)
 
         # ! it can not be null, so casting is not an issue here

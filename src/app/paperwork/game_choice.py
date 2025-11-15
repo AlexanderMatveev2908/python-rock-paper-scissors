@@ -11,10 +11,15 @@ class GameChoice(Enum):
 
     @classmethod
     def from_input(cls: type["GameChoice"], opt: str) -> "GameChoice | None":
+        if not opt:
+            return None
+
         parsed: str = opt.lower().strip()
 
         for item in cls:
-            if parsed == item.value:
+            if parsed == item.value or (
+                parsed[0] == item.value and item.value != "exit"
+            ):
                 return item
 
         return None

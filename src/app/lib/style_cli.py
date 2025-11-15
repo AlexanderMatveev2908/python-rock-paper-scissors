@@ -1,3 +1,4 @@
+from app.paperwork.ctx_game import CtxGame
 from app.paperwork.game_choice import GameChoice
 from app.paperwork.types import WinnerT
 
@@ -31,3 +32,9 @@ class StyleCLI:
                 print("CPU win this round 🔋")
             case "TIE":
                 print("It's a tie 🤝")
+
+    @classmethod
+    def score(cls: type["StyleCLI"], ctx: CtxGame) -> None:
+        cls.tab()
+
+        print(f"Score - You: {ctx.user} | CPU: {ctx.cpu} | Ties: {ctx.ties}")
