@@ -1,7 +1,7 @@
 from app.lib.core_mng import CoreMng
 from app.lib.data_collect import DataCollect
 from app.lib.style_cli import StyleCLI
-from app.paperwork.ctx_game import CtxGame
+from app.lib.ctx_game import CtxGame
 from app.paperwork.game_choice import GameChoice
 from app.paperwork.types import WinnerT
 

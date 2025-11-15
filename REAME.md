@@ -1,4 +1,4 @@
-# 🧮 PYTHON CLI ROCK-PAPER-SCISSORS
+# 🕹️ PYTHON CLI ROCK-PAPER-SCISSORS
 
 ## 📌 About This Project
 

@@ -1,7 +1,5 @@
 from enum import Enum
 
-from app.lib.dev.error import ErrApp
-
 
 class GameChoice(Enum):
     ROCK = "r"
@@ -36,6 +34,8 @@ class GameChoice(Enum):
                 return "paper"
             case "s":
                 return "scissors"
+            case "exit":
+                return "👻"
             case _:
                 return "👻"
 
@@ -48,4 +48,6 @@ class GameChoice(Enum):
             case "s":
                 return "✌️"
             case "exit":
+                return "👻"
+            case _:
                 return "👻"
