@@ -1,4 +1,5 @@
 from app.paperwork.game_choice import GameChoice
+from app.paperwork.types import WinnerT
 
 
 class StyleCLI:
@@ -17,5 +18,16 @@ class StyleCLI:
     ) -> None:
         cls.tab()
 
-        print(f"You chose: {user.for_printer()}")
-        print(f"Computer chose: {user.for_printer()}")
+        print(f"You chose: {user.emj()} {user.for_printer()}")
+        print(f"Computer chose: {cpu.emj()} {cpu.for_printer()}")
+
+    @classmethod
+    def the_winner_is(cls: type["StyleCLI"], w: WinnerT) -> None:
+
+        match w:
+            case "USER":
+                print("You win this round 🎉")
+            case "CPU":
+                print("CPU win this round 🔋")
+            case "TIE":
+                print("It's a tie 🤝")

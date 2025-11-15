@@ -33,3 +33,14 @@ class GameChoice(Enum):
                 return "scissors"
             case _:
                 return "👻"
+
+    def emj(self: "GameChoice") -> str:
+        match self.value:
+            case "r":
+                return "✊"
+            case "p":
+                return "🖐️"
+            case "s":
+                return "✌️"
+            case "exit":
+                return "👻"
